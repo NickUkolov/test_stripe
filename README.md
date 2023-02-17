@@ -20,8 +20,8 @@ API с двумя методами:
 ### Шаги для запуска проекта локально с помощью Docker (.env.dev файл для запуска с тестовыми значениями в репозитории):
 
 1. ```docker-compose up -d --build```
-2. ```docker-compose exec web python manage.py migrate --noinput```
-3. ```docker-compose exec web python manage.py createsuperuser```
+2. ```docker-compose exec web_app python manage.py migrate --noinput```
+3. ```docker-compose exec web_app python manage.py createsuperuser```
 4.  Добавить товары и заказы в админке (/admin)
 
 ### Протестировать можно по ссылке тестового сервера ```http:/194.67.112.94``` c помощью нижеуказанных URL
