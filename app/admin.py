@@ -15,7 +15,7 @@ class ItemInline(admin.StackedInline):
 
 class OrderAdmin(admin.ModelAdmin):
     inlines = [ItemInline, ]
-    fields = ('name', 'paid', )
+    fields = ('name', 'paid', 'currency')
 
 
 admin.site.register(Item, ItemAdmin)
