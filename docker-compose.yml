@@ -13,13 +13,13 @@ services:
       - backend
 
   web_app:
-#    container_name: web_app
     build: .
     networks:
       - backend
     command: python manage.py runserver 0.0.0.0:8000
-#    volumes:
+    volumes:
 #      - static_volume:/usr/src/web_app/staticfiles/
+      - .:/usr/src/web_app/ # dev
     ports:
       - 8000:8000
     env_file:
