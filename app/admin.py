@@ -1,19 +1,22 @@
 from django.contrib import admin
 
-from app.models import Item, Order
+from app.models import Item, Order, OrderItem
+
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'price')
-    fields = ('name', 'description', 'price', 'currency', 'order')
+    fields = ('name', 'description', 'price', 'currency')
+
 
 class ItemInline(admin.StackedInline):
-    model = Item
-    extra = 1
+    model = OrderItem
+    extra = 2
 
 
-class OrdersAdmin(admin.ModelAdmin):
-    # inlines = [ItemInline,]
-    fields = ('name', 'paid')
+class OrderAdmin(admin.ModelAdmin):
+    inlines = [ItemInline, ]
+    fields = ('name', 'paid', )
+
 
 admin.site.register(Item, ItemAdmin)
-admin.site.register(Order, OrdersAdmin)
+admin.site.register(Order, OrderAdmin)
