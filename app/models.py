@@ -51,4 +51,4 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f'{self.item.name}, ' \
-               f'${self.item.price} * {self.count} = ${self.total()}'
+               f'${self.item.price/100} * {self.count} = ${self.total()}'
