@@ -24,7 +24,6 @@ class Order(models.Model):
     paid = models.BooleanField(default=False)
     currency = models.CharField(max_length=3, blank=True, null=True, default='usd')
 
-
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
@@ -36,7 +35,7 @@ class Order(models.Model):
         ])
 
     def price(self):
-        return int(self.total_price()*100)
+        return int(self.total_price() * 100)
 
     def __str__(self):
         return f'{self.name}, ${self.total_price()}: {self.paid}'
@@ -48,7 +47,7 @@ class OrderItem(models.Model):
     count = models.IntegerField(default=1)
 
     def total(self):
-        return (self.count * self.item.price)/100
+        return (self.count * self.item.price) / 100
 
     def __str__(self):
         return f'{self.item.name}, ' \
