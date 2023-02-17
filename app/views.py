@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.views import View
 from django.views.generic import TemplateView, DetailView
 
-from app.models import Item, Order, OrderItem
+from app.models import Item, Order
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
