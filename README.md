@@ -27,17 +27,17 @@ API с двумя методами:
 ### Протестировать можно по ссылке тестового сервера ```http:/194.67.112.94``` c помощью нижеуказанных URL
 
 ## URLS
-#### GET /item/<int:pk>/  (```http:/194.67.112.94/item/1/```)
-#### GET /order/<int:pk>/  (```http:/194.67.112.94/order/1/```)
+#### GET /item/<int:pk>/  ---  [http:/194.67.112.94/item/1/](http:/194.67.112.94/item/1/)
+#### GET /order/<int:pk>/  ---  [http:/194.67.112.94/order/1/](http:/194.67.112.94/order/1/)
 ~~~
 HTML страница с простым описанием товара (/item) или заказа (/order) и кнопкой для перехода на stripe checkout форму
 ~~~
-#### GET /buy/<int:pk>/  (```http:/194.67.112.94/buy/1/```)
-#### GET /buy_order/<int:pk>/  (```http:/194.67.112.94/buy_order/1/```)
+#### GET /buy/<int:pk>/  ---  [http:/194.67.112.94/buy/1/](http:/194.67.112.94/buy/1/)
+#### GET /buy_order/<int:pk>/  ---  [http:/194.67.112.94/buy_order/1/](http:/194.67.112.94/buy_order/1/)
 ~~~
 JSON response для получения session id конкретного товара (/item) или заказа (/order)
 ~~~
-#### /admin/  (```http:/194.67.112.94/admin/```)
+#### /admin/  ---  [http:/194.67.112.94/admin/](http:/194.67.112.94/admin/)
 ~~~
 логин: admin
 пароль: admin
