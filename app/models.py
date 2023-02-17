@@ -5,7 +5,8 @@ class Item(models.Model):
     name = models.CharField(max_length=128, verbose_name='Название')
     description = models.CharField(max_length=256, verbose_name='Описание')
     price = models.IntegerField(default=0, verbose_name='Цена в центах')
-    currency = models.CharField(choices=(('usd', 'usd'),), max_length=3, blank=True, null=True, verbose_name='Валюта')
+    currency = models.CharField(choices=(('usd', 'usd'),), max_length=3,
+                                blank=True, null=True, verbose_name='Валюта')
 
     class Meta:
         verbose_name = 'Товар'
@@ -22,7 +23,8 @@ class Order(models.Model):
     name = models.CharField(max_length=128, null=True, blank=True, verbose_name='Название')
     created_at = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False, verbose_name='Оплачено')
-    currency = models.CharField(choices=(('usd', 'usd'),), max_length=3, blank=True, null=True, default='usd', verbose_name='Валюта')
+    currency = models.CharField(choices=(('usd', 'usd'),), max_length=3,
+                                blank=True, null=True, default='usd', verbose_name='Валюта')
 
     class Meta:
         verbose_name = 'Заказ'
