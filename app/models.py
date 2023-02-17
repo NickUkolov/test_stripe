@@ -4,7 +4,7 @@ from django.db import models
 class Item(models.Model):
     name = models.CharField(max_length=128, verbose_name='Название')
     description = models.CharField(max_length=256, verbose_name='Описание')
-    price = models.IntegerField(default=0, verbose_name='Цена')
+    price = models.IntegerField(default=0, verbose_name='Цена в центах')
     currency = models.CharField(choices=(('usd', 'usd'),), max_length=3, blank=True, null=True, verbose_name='Валюта')
 
     class Meta:
