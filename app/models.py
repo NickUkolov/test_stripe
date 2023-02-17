@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, verbose_name='Название')
     description = models.CharField(max_length=256)
     price = models.IntegerField(default=0)
     currency = models.CharField(choices=(('usd', 'usd'),), max_length=3, blank=True, null=True)
